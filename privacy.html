@@ -32,7 +32,8 @@
 
   <h2>접근하는 Google 사용자 데이터</h2>
   <ul>
-    <li><b>Google 캘린더 (https://www.googleapis.com/auth/calendar)</b>: 사용자가 Google 캘린더에서 표시하도록 선택한 캘린더 목록과 일정(제목, 시작·종료 시각, 색상, 일정 링크)을 읽습니다.</li>
+    <li><b>Google 캘린더 일정 (https://www.googleapis.com/auth/calendar.events)</b>: 사용자가 Google 캘린더에서 표시하도록 선택한 캘린더의 일정(제목, 시작·종료 시각, 색상, 일정 링크)을 읽고, 사용자가 앱에서 요청한 일정 추가·삭제를 수행합니다.</li>
+    <li><b>Google 캘린더 목록 (https://www.googleapis.com/auth/calendar.calendarlist.readonly)</b>: 표시할 캘린더 목록과 캘린더 색상, 일정을 추가할 수 있는 캘린더인지를 확인합니다.</li>
     <li>사용자가 앱에서 일정을 추가하거나 삭제하면 그 요청에 한해 Google 캘린더에 기록합니다.</li>
     <li><b>Google 드라이브 앱 데이터 (https://www.googleapis.com/auth/drive.appdata)</b>: 메모 탭의 내용을 사용자 Google 드라이브의 <b>이 앱 전용 숨김 폴더</b>(appDataFolder)에 <code>memos.json</code> 한 파일로 저장해, 다른 PC에서 같은 계정으로 로그인해도 메모를 이어 쓸 수 있게 합니다. 이 권한으로는 사용자의 다른 드라이브 파일을 보거나 바꿀 수 없습니다.</li>
     <li><b>기본 프로필 (https://www.googleapis.com/auth/userinfo.profile)</b>: 이름과 프로필 사진을 읽어 앱 오른쪽 위 계정 버튼에 표시합니다.</li>
@@ -75,6 +76,34 @@
 
   <h2>문의</h2>
   <p>개인정보 관련 문의: <a href="mailto:tmdsh2000@naver.com">tmdsh2000@naver.com</a></p>
+
+  <hr style="margin:40px 0;border:none;border-top:1px solid #ddd">
+  <h1 lang="en">Privacy Policy (English summary)</h1>
+  <div lang="en">
+  <p><b>Dalbit Calendar for Windows</b> ("the app") runs entirely on the user's PC. The developer operates no server and collects no personal data.</p>
+  <h2>Google user data the app accesses</h2>
+  <ul>
+    <li><b>calendar.events</b>: reads events from the calendars the user chose to show in Google Calendar, to display them in the month view, and creates or deletes an event only when the user explicitly asks in the app.</li>
+    <li><b>calendar.calendarlist.readonly</b>: reads the list of calendars, their colors, and whether the user can add events to them.</li>
+    <li><b>drive.appdata</b>: stores the user's memo tabs as a single file (<code>memos.json</code>) in the app's hidden application data folder in the user's Google Drive, so the same memos appear when the user signs in on another PC. The app cannot see or change any other Drive files.</li>
+    <li><b>userinfo.profile</b>: reads the user's name and profile picture to show the signed-in account in the app.</li>
+  </ul>
+  <h2>Use, storage and sharing</h2>
+  <ul>
+    <li>Data is used only to show it in the app's user interface and to perform actions the user requests. It is not used for advertising, analytics, profiling, or AI training.</li>
+    <li>The OAuth token and settings are stored only in <code>%AppData%\DalbitCalendar</code> on the user's PC. Calendar data is kept in memory while the app runs.</li>
+    <li>Data is exchanged only between the user's PC and Google APIs. It is never sold or transferred to third parties.</li>
+  </ul>
+  <h2>Limited Use</h2>
+  <p>Dalbit Calendar for Windows's use and transfer to any other app of information received from Google APIs will adhere to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  <h2>Deletion</h2>
+  <ul>
+    <li>Signing out in the app deletes the stored token from the PC. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>Memos stored in Drive can be removed in Google Drive &gt; Settings &gt; Manage apps &gt; Dalbit Calendar &gt; Delete hidden app data.</li>
+  </ul>
+  <p>Contact: <a href="mailto:tmdsh2000@naver.com">tmdsh2000@naver.com</a></p>
+  </div>
   <footer>© 2026 Huiryu Yoon · <a href="index.html">홈</a> · <a href="privacy.html">개인정보 처리방침</a> · <a href="terms.html">이용약관</a></footer>
 </body>
 </html>
