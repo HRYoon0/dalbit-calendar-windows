@@ -24,7 +24,7 @@
 </head>
 <body>
   <h1>개인정보 처리방침</h1>
-  <p>최종 수정일: 2026년 10월 6일 (메모 드라이브 동기화 추가)</p>
+  <p>최종 수정일: 2026년 10월 13일 (아이폰 앱의 구글 캘린더 연결 추가)</p>
 
   <h2>요약</h2>
   <p><b>달빛 캘린더 for Windows(이하 "앱")는 개발자의 서버로 어떤 개인정보도 수집·전송하지 않습니다.</b>
@@ -62,8 +62,18 @@
     <li>Google 사용자 데이터를 제3자에게 판매하거나 제공하지 않습니다.</li>
   </ul>
 
+  <h2>아이폰 앱(달빛 캘린더 - 위젯 달력)의 구글 캘린더 연결</h2>
+  <p>같은 개발자의 아이폰 앱도 이 Google 로그인을 사용합니다. 앱 설정에서 "구글 캘린더 바로 연결"을 켠 경우에만 접근합니다.</p>
+  <ul>
+    <li><b>Google 캘린더 일정</b> (calendar.events): 아이폰 캘린더에 연결된 같은 구글 계정의 캘린더에서 일정(제목, 시작·종료 시각, 반복 규칙)을 읽어 앱과 홈 화면 위젯에 표시하고, 사용자가 앱에서 요청한 일정 추가·수정·이동·삭제를 수행합니다.</li>
+    <li><b>Google 캘린더 목록</b> (calendar.calendarlist.readonly): 캘린더 목록과 일정을 추가할 수 있는 캘린더인지 확인하고, 로그인한 계정을 표시하기 위해 기본 캘린더의 식별자(이메일 주소)를 읽습니다.</li>
+    <li>드라이브와 프로필 권한은 요청하지 않습니다.</li>
+    <li>로그인 정보(OAuth 토큰)는 아이폰 키체인에, 최근 일정 사본은 앱과 위젯이 함께 쓰는 기기 안 저장 공간에만 보관하며, 하루가 지난 사본은 자동으로 지웁니다. 개발자 서버로는 아무것도 전송하지 않습니다.</li>
+    <li>앱 설정에서 "해제"를 누르면 Google에 권한 철회를 요청하고 기기에 저장된 로그인 정보와 일정 사본을 삭제합니다.</li>
+  </ul>
+
   <h2>Google API 서비스 사용자 데이터 정책 준수</h2>
-  <p>달빛 캘린더 for Windows가 Google API에서 받은 정보를 사용하고 다른 앱으로 전송하는 방식은
+  <p>달빛 캘린더(Windows·아이폰)가 Google API에서 받은 정보를 사용하고 다른 앱으로 전송하는 방식은
   제한적 사용(Limited Use) 요구사항을 포함한
   <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>을 준수합니다.</p>
 
@@ -96,8 +106,14 @@
     <li>Data is exchanged only between the user's PC and Google APIs. It is never sold or transferred to third parties.</li>
     <li>When the user first picks a Google Font for a memo, the app downloads that font file from the official Google Fonts repository on GitHub (raw.githubusercontent.com/google/fonts) and stores it in <code>%AppData%\DalbitCalendar\fonts</code>. No user data is sent in this request.</li>
   </ul>
+  <h2>iPhone app (Dalbit Calendar - Widget Calendar)</h2>
+  <ul>
+    <li>The developer's iPhone app uses the same Google sign-in, only when the user turns on "Connect Google Calendar" in its settings. It requests <b>calendar.events</b> (to show the user's events in the app and home-screen widgets, and to add, edit, move or delete an event only when the user asks) and <b>calendar.calendarlist.readonly</b> (calendar list, which calendars are writable, and the primary calendar ID to show the signed-in account). It does not request Drive or profile access.</li>
+    <li>The OAuth token is stored in the iPhone Keychain and a recent copy of events is kept only on the device (shared between the app and its widgets) and removed after one day. Nothing is sent to any developer server.</li>
+    <li>Tapping "Disconnect" in the app revokes the token with Google and deletes the stored token and event copy from the device.</li>
+  </ul>
   <h2>Limited Use</h2>
-  <p>Dalbit Calendar for Windows's use and transfer to any other app of information received from Google APIs will adhere to the
+  <p>Dalbit Calendar (Windows and iPhone)'s use and transfer to any other app of information received from Google APIs will adhere to the
   <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
   <h2>Deletion</h2>
   <ul>
